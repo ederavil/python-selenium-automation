@@ -2,7 +2,7 @@
 Feature: Target Sign In
 
   Scenario: Verify logged out user can sign in
-    Given Open Target page
+    Given Open Target Main page
     When Click on Sign in
     And Click on Sign in from side menu
     Then Verify sign in form opens
