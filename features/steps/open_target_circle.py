@@ -1,12 +1,12 @@
 from selenium.webdriver.common.by import By
 from behave import given, when, then
-from time import sleep
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 
 @when('Click on Target circle icon from top of page')
 def click_target_circle(context):
     context.driver.find_element(By.ID, "utilityNav-circle").click()
-    sleep(5)
 
 
 @then('Verify Target circle page is opened')
