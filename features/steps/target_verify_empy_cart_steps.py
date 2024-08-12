@@ -6,7 +6,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 @given('Open Target Main Page')
 def open_target(context):
-    context.driver.get('https://www.target.com/')
+    context.app.main_page.open()
 
 
 @when('Click on cart icon')

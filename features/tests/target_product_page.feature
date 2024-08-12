@@ -11,3 +11,4 @@ Feature: Target Product Page Tests
     When Search for cups
     Then Verify product image displays for each
     Then Verify product name displays for each
+    Then Verify that every product has a name and an image
