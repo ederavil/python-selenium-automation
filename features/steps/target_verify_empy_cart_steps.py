@@ -11,7 +11,7 @@ def open_target(context):
 
 @when('Click on cart icon')
 def click_cart_icon(context):
-    context.driver.find_element(By.CSS_SELECTOR, "use[href*='/icons/Cart']").click()
+    context.app.base_page.click_cart()
 
 
 @then('Verify empty cart message shown is shown')

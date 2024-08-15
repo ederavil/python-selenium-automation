@@ -6,7 +6,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 @when('Search for {product}')
 def search_chips(context, product):
-    context.app.header.search_product()
+    context.app.header.search_product(product)
 
 
 @then('Verify search results show {product}')

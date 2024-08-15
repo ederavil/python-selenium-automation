@@ -18,8 +18,8 @@ Feature: Target Main Page Tests
   Scenario: User add chips to cart
     Given Open Target Main page
     When Search for chips
-    Then Add Cheetos to cart
-    And Verify Cheetos Jumbo is in cart
+    Then Add chips to cart
+    And Verify chips is in cart
 
 
   Scenario: User opens Target circle page

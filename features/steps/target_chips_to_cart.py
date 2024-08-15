@@ -6,14 +6,15 @@ from selenium.webdriver.support import expected_conditions as EC
 
 
 cheetos_in_cart = (By.CSS_SELECTOR, "[aria-label*='1 in cart for Cheetos Jumbo']")
-@then('Add Cheetos to cart')
-def add_cheetos_to_cart(context):
-    context.driver.find_element(By.CSS_SELECTOR, "[aria-label *= 'Add Cheetos Jumbo']").click()
-    context.driver.find_element(By.CSS_SELECTOR, "[data-test='orderPickupButton']").click()
 
 
-@then('Verify Cheetos Jumbo is in cart')
-def verify_in_cart(context):
-    context.driver.wait.until(EC.visibility_of_element_located(cheetos_in_cart))
-    context.driver.find_element(By.CSS_SELECTOR, "[aria-label*='1 in cart for Cheetos Jumbo']")
+@then('Add {product} to cart')
+def add_chips_to_cart(context, product):
+    context.driver.execute_script("window.scrollBy(0,2000)", "")
+    context.app.search_results_page.add_to_cart()
+
+
+@then('Verify {product} is in cart')
+def verify_in_cart(context, product):
+    context.app.search_results_page.verify_product_in_cart()
 
